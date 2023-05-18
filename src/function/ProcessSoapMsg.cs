@@ -14,13 +14,13 @@ namespace Contoso
     {
         [FunctionName("ProcessSoapMsg")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             ILogger log)
         {        
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
 
             string responseMessage = $"Here the SOAP request {requestBody}";
-            
+
             return new OkObjectResult(responseMessage);
         }
     }
