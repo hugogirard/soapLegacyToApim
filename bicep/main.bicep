@@ -24,6 +24,15 @@ module monitoring 'modules/monitoring/monitoring.bicep' = {
   }
 }
 
+module storage 'modules/storage/storage.bicep' = {
+  scope: resourceGroup(rg.name)
+  name: 'storage'
+  params: {
+    location: location
+    storageName: 'strf${suffix}'
+  }
+}
+
 module function 'modules/function/function.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'function'

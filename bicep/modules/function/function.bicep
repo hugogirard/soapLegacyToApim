@@ -1,20 +1,11 @@
 param location string
 param suffix string
 param appInsightName string
+param storageName string
 
 
-
-resource storage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
-  name: 'strf${suffix}'
-  location: location
-  sku: {
-    name: 'Standard_LRS'    
-  }
-  kind: 'StorageV2'
-  properties: {
-    supportsHttpsTrafficOnly: true
-    accessTier: 'Hot'
-  }
+resource storage 'Microsoft.Storage/storageAccounts@2021-04-01' existing = {
+  name: storageName
 }
 
 resource appInsights 'Microsoft.Insights/components@2020-02-02' existing = {
