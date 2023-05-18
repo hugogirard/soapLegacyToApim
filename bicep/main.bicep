@@ -24,7 +24,7 @@ module monitoring 'modules/monitoring/monitoring.bicep' = {
   }
 }
 
-module storage 'modules/storage/storage.bicep' = {
+module storageFunction 'modules/storage/storage.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'storage'
   params: {
@@ -40,6 +40,7 @@ module function 'modules/function/function.bicep' = {
     location: location
     suffix: suffix
     appInsightName: monitoring.outputs.appInsightName
+    storageName: storageFunction.outputs.name
   }
 }
 
