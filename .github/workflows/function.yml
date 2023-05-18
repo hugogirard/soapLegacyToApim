@@ -1,4 +1,4 @@
-name: Deploy Azure Function ProcessSoapMessage
+name: Deploy Azure Function
 
 on:
   workflow_dispatch:
