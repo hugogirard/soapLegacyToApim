@@ -32,7 +32,7 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' existing = {
 }
 
 resource apiManagement 'Microsoft.ApiManagement/service@2022-08-01' = {
-  name: 'api-${suffix}'
+  name: 'api-int-${suffix}'
   location: location
   sku: {
     name: 'Consumption'
