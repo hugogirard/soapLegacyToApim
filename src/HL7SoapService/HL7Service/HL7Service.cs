@@ -6,6 +6,10 @@ namespace Contoso
 {
     public class HL7Service : IHL7Service
     {
+        public string Ping()
+        {
+            return "Pong";
+        }
 
         public string ProcessHl7Message(string message)
         {

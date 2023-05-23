@@ -5,5 +5,8 @@ namespace Contoso
     {
         [OperationContract]
         string ProcessHl7Message(string message);
+
+        [OperationContract]
+        string Ping();
     }
 }

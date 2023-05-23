@@ -17,7 +17,7 @@
 # For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
 
-name: Build and deploy ASP.Net Core app to an Azure Web App
+name: Build and deploy Hl7SoapService
 
 env:
   AZURE_WEBAPP_PACKAGE_PATH: './src/HL7SoapService/HL7Service'
@@ -30,9 +30,6 @@ on:
     paths:
       - "src/HL7SoapService/HL7Service/**"      
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   build:
