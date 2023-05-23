@@ -30,9 +30,10 @@ resource soap 'Microsoft.Web/sites@2022-09-01' = {
           value: 'default'
         }               
       ] 
-      netFrameworkVersion: 'v7.0'                 
+      netFrameworkVersion: 'v.6.0'                       
     }          
     serverFarmId: appServiceId 
+    httpsOnly: true
   } 
 }
 
