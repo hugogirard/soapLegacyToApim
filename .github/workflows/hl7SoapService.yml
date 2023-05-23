@@ -34,7 +34,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.2
 
       - name: Run MSBuild
-        run: msbuild .\SoapLegacyService.sln
+        run: msbuild .\WCFHL7Service.sln
         working-directory: ${{ env.SOLUTION_PATH }}
         
       - name: Login via Az module
