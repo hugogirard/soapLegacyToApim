@@ -33,7 +33,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.2
 
       - name: Run MSBuild
-        run: msbuild .\HL7Service.sln
+        run: msbuild .\HL7Service.sln /p:Configuration=Release
         working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
         
       - name: Login via Az module
