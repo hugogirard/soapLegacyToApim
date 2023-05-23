@@ -6,9 +6,9 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-public class Hl7Service : IHl7Service
+// NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service" in code, svc and config file together.
+public class HL7Service : IHL7Service
 {
-
     public string ProcessHl7Message(string message)
     {
         var parser = new Hl7.Fhir.Serialization.FhirJsonParser();
