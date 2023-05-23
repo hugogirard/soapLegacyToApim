@@ -44,6 +44,26 @@ module function 'modules/function/function.bicep' = {
   }
 }
 
+module asp 'modules/webApp/appServicePlan.bicep' = {
+  scope: resourceGroup(rg.name)
+  name: 'asp'
+  params: {
+    location: location
+    suffix: suffix
+  }
+}
+
+module soapService 'modules/webApp/soapService.bicep' = {
+  scope: resourceGroup(rg.name)
+  name: 'soapService'
+  params: {
+    appInsightName: monitoring.outputs.appInsightName
+    appServiceId: asp.outputs.aspId
+    location: location
+    suffix: suffix
+  }
+}
+
 module apim 'modules/apim/apim.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'apim'
