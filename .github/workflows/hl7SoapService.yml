@@ -6,12 +6,12 @@ on:
     branches:
       - master
     paths:
-      - 'src/SoapLegacyService/**'
+      - 'src/WCFService/**'
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: 'soap-q32gwqonlqkxk'
-  AZURE_WEBAPP_PACKAGE_PATH: 'src/SoapLegacyService'
+  AZURE_WEBAPP_NAME: 'soap-x4hi4xuofqytw'
+  AZURE_WEBAPP_PACKAGE_PATH: 'src/WCFService/Hl7Service'
   NUGET_VERSION: '5.3.x'
 
 jobs:
