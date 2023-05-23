@@ -12,7 +12,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: 'soap-x4hi4xuofqytw'
   AZURE_WEBAPP_PACKAGE_PATH: 'src/WCFService/Hl7Service'
-  SOLUTION_PATH": 'src/WCFService'
+  SOLUTION_PATH": 'src'
   NUGET_VERSION: '5.3.x'
 
 jobs:
