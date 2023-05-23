@@ -12,27 +12,6 @@ public interface IService
 {
 
 	[OperationContract]
-    PatientInfo ExtractPatientName(string message);
+    string HelloWorld(string name);
 	
-}
-
-[DataContract]
-public class PatientInfo
-{
-    string _lastName;
-    string _firstName;
-
-	[DataMember]
-	public string LastName
-	{
-		get { return _lastName; }
-		set { _lastName = value; }
-	}
-
-	[DataMember]
-	public string FirstName
-	{
-		get { return _firstName; }
-		set { _firstName = value; }
-	}
 }
